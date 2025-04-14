@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../static/logo.png">
+    <title>Brain Stroke</title>
+    <link rel="stylesheet" href="0/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../static/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../static/assets/css/rent.css" rel="stylesheet">
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">HEALTHBAY</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+             
+              <!-- <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#search">Search</a>
+              </li> -->
+              
+              <li class="nav-item">
+                <a class="nav-link" href="https://healthway-daignosis-application.netlify.app/#home">Home</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="https://healthway-daignosis-application.netlify.app/#services">Services</a>
+              </li>
+                
+              <li class="nav-item">
+                <a class="nav-link" href="https://healthway-daignosis-application.netlify.app/#contactus">Contact us</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="https://healthway-daignosis-application.netlify.app/#aboutus">About Us</a>
+              </li>
+  
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <br><br><br><br><br><br><br><br><br>
+    <h1>Test Report : </h1>
+    <br>
+    <div class="results">
+		{% if prediction==1 %}
+		<h3><span class='danger'>Oops! 😞 you have chances of getting <strong>Brain-Stroke</strong> Please consult with doctor</span></h3>
+		{% elif prediction==0 %}
+		<h3><span class='safe'>Great! 🙂 You don't have chances of getting <strong>Brain-Stroke</strong></span></h3>
+		{% endif %}
+	</div>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <!-- Footer -->
+    <footer style="background-color: #ccc;">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+            <br>
+            <span><h1 id="aboutus">About Us</h1>Healthbay is a <strong>predictive website</strong> and the model trained by <strong> supervised machine learning</strong> and for training the model we are taking data from kaggle </span>
+          </div>
+
+          <div class="col-md-8"><br>
+            <h1>Contact Us </h1>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="https://mobile.twitter.com/RohitSa65942986">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/abhi.modi.777/">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/rohit-sahu-797657206/">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/__rohit___sahu__/">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/rohitsahu70">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-9">
+            <br><hr>
+            <span class="copyright">&copy; Copyright 2021. Made with ❤️ by <strong>Rohit Sahu</strong>.</span>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+     
+      <!-- Bootstrap core JavaScript -->
+      <script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+      <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  
+      <!-- Plugin JavaScript -->
+      <script src="../static/assets/plugins/jquery-easing/jquery.easing.min.js"></script>
+  
+      <!-- Contact form JavaScript -->
+      <script src="../static/assets/js/jqBootstrapValidation.js"></script>
+      <script src="../static/assets/js/contact_me.js"></script>
+  
+      <!-- Custom scripts for this template -->
+      <script src="../static/assets/js/rent.js"></script>
+
+
+</body>
+
+</html>
