@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../static/logo.png">
+    <title>Breast Cancer</title>
+    <link rel="stylesheet" href="0/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+          <!-- Bootstrap core CSS -->
+    <link href="../static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../static/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../static/assets/css/rent.css" rel="stylesheet">
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">HEALTHBAY</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+             
+              <!-- <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#search">Search</a>
+              </li> -->
+              
+              <li class="nav-item">
+                <a class="nav-link" href="https://healthway-daignosis-application.netlify.app/#home">Home</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="https://healthway-daignosis-application.netlify.app/#services">Services</a>
+              </li>
+                
+              <li class="nav-item">
+                <a class="nav-link" href="https://healthway-daignosis-application.netlify.app/#contactus">Contact us</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="https://healthway-daignosis-application.netlify.app/#aboutus">About Us</a>
+              </li>
+  
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div id="intro" class="container-fluid view "><br><br><br><br>
+        <h1 class="text-center text-capitalize pt-5">Know your chances of getting <strong>Breast Cancer</strong> in one Click!</h1>
+        <hr class="w-75 mx-auto pt-5">
+        <div class="row mb-5">
+            <div class="col-lg-6 col-md-6 col-12 my-auto">
+                <img src="https://images.vexels.com/media/users/3/184678/isolated/preview/d98eb9cb382dc2b156220a21f6333785-breast-cancer-awareness-month-by-vexels.png" class="float-left">
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <form action="{{ url_for('predict')}}" method="POST">
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">mean radius</label>
+                        <input class="form-control" type="number" id="mean radius" name="mean radius" required="required"
+                            placeholder="mean radius">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">mean texture</label>
+                        <input class="form-control" type="number" id="mean texture" name="mean texture"
+                            required="required" placeholder="mean texture">
+                    </div> 
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">mean perimeter</label>
+                        <input class="form-control" type="number" id="mean perimeter" name="mean perimeter"
+                            required="required" placeholder="mean perimeter">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">mean area</label>
+                        <input class="form-control" type="number" id="mean area" name="mean area"
+                            required="required" placeholder="mean area">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">mean smoothness</label>
+                        <input class="form-control" type="number" id="mean smoothness" name="mean smoothness"
+                            required="required" placeholder="mean smoothness">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">mean compactness</label>
+                        <input class="form-control" type="number" id="mean compactness" name="mean compactness"
+                            required="required" placeholder="mean compactness">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean"> mean concavity</label>
+                        <input class="form-control" type="number" id=" mean concavity" name=" mean concavity"
+                            required="required" placeholder=" mean concavity">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">mean concave points</label>
+                        <input class="form-control" type="number" id="mean concave points" name="mean concave points"
+                            required="required" placeholder="mean concave points">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean"> mean symmetry</label>
+                        <input class="form-control" type="number" id=" mean symmetry" name=" mean symmetry"
+                            required="required" placeholder=" mean symmetry">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">mean fractal dimension</label>
+                        <input class="form-control" type="number" id="mean fractal dimension" name="mean fractal dimension"
+                            required="required" placeholder="mean fractal dimension">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">radius error</label>
+                        <input class="form-control" type="number" id="radius error" name="radius error"
+                            required="required" placeholder="radius error">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">texture error</label>
+                        <input class="form-control" type="number" id="texture error" name="texture error"
+                            required="required" placeholder="texture error">
+                    </div>
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">perimeter error</label>
+                        <input class="form-control" type="number" id="perimeter error" name="perimeter error"
+                            required="required" placeholder="perimeter error">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">area error</label>
+                        <input class="form-control" type="number" id="area error" name="area error"
+                            required="required" placeholder="area error">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">smoothness error</label>
+                        <input class="form-control" type="number" id="smoothness error" name="smoothness error"
+                            required="required" placeholder="smoothness error">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">compactness error </label>
+                        <input class="form-control" type="number" id="compactness error " name="compactness error "
+                            required="required" placeholder="compactness error ">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">concavity error</label>
+                        <input class="form-control" type="number" id="concavity error" name="concavity error"
+                            required="required" placeholder="concavity error">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">concave points error</label>
+                        <input class="form-control" type="number" id="concave points error" name="concave points error"
+                            required="required" placeholder="concave points error">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">symmetry error </label>
+                        <input class="form-control" type="number" id="symmetry error " name="symmetry error "
+                            required="required" placeholder="symmetry error ">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">fractal dimension error</label>
+                        <input class="form-control" type="number" id="fractal dimension error" name="fractal dimension error"
+                            required="required" placeholder="fractal dimension error">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">worst radius</label>
+                        <input class="form-control" type="number" id="worst radius" name="worst radius"
+                            required="required" placeholder="worst radius">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">worst texture</label>
+                        <input class="form-control" type="number" id="worst texture" name="worst texture"
+                            required="required" placeholder="worst texture">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean"> worst perimeter</label>
+                        <input class="form-control" type="number" id="worst perimeter" name="worst perimeter"
+                            required="required" placeholder="worst perimeter">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">worst area</label>
+                        <input class="form-control" type="number" id="worst area" name="worst area"
+                            required="required" placeholder="worst area">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">worst smoothness</label>
+                        <input class="form-control" type="number" id="worst smoothness" name="worst smoothness"
+                            required="required" placeholder="worst smoothness">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">worst compactness</label>
+                        <input class="form-control" type="number" id="worst compactness" name="worst compactness"
+                            required="required" placeholder="worst compactness">
+                    </div>
+
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">worst concavity</label>
+                        <input class="form-control" type="number" id="worst concavity" name="worst concavity"
+                            required="required" placeholder="worst concavity">
+                    </div>
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">worst concave points</label>
+                        <input class="form-control" type="number" id="worst concave points" name="worst concave points"
+                            required="required" placeholder="worst concave points">
+                    </div>
+                    <div class="form-group">
+                        <br>
+                        <label for="concave points_mean">worst symmetry</label>
+                        <input class="form-control" type="number" id="worst symmetry" name="worst symmetry"
+                            required="required" placeholder="worst symmetry">
+                    </div><div class="form-group">
+                        <br>
+                        <label for="concave points_mean"> worst fractal dimension</label>
+                        <input class="form-control" type="number" id=" worst fractal dimension" name=" worst fractal dimension"
+                            required="required" placeholder=" worst fractal dimension">
+                            <br>
+                            <button type="submit" class="btn btn-danger">Check</button>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+        <!-- Footer -->
+        <footer style="background-color: #ccc;">
+          <div class="container">
+            <div class="row">
+    
+              <div class="col-md-4">
+                <br>
+                <span><h1 id="aboutus">About Us</h1>Healthbay is a <strong>predictive website</strong> and the model trained by <strong> supervised machine learning</strong> and for training the model we are taking data from kaggle </span>
+              </div>
+    
+              <div class="col-md-8"><br>
+                <h1>Contact Us </h1>
+                <ul class="list-inline social-buttons">
+                  <li class="list-inline-item">
+                    <a href="https://mobile.twitter.com/RohitSa65942986">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.facebook.com/abhi.modi.777/">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/rohit-sahu-797657206/">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.instagram.com/__rohit___sahu__/">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://github.com/rohitsahu70">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+    
+              <div class="col-md-9">
+                <br><hr>
+                <span class="copyright">&copy; Copyright 2021. Made with ❤️ by <strong>Rohit Sahu</strong>.</span>
+              </div>
+    
+            </div>
+          </div>
+        </footer>
+     
+      <!-- Bootstrap core JavaScript -->
+      <script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+      <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  
+      <!-- Plugin JavaScript -->
+      <script src="../static/assets/plugins/jquery-easing/jquery.easing.min.js"></script>
+  
+      <!-- Contact form JavaScript -->
+      <script src="../static/assets/js/jqBootstrapValidation.js"></script>
+      <script src="../static/assets/js/contact_me.js"></script>
+  
+      <!-- Custom scripts for this template -->
+      <script src="../static/assets/js/rent.js"></script>
+
+    
+</body>
+
+</html>
